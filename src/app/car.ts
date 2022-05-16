@@ -22,7 +22,7 @@ export class EV extends Car {
   constructor(
     public make: string,
     public speed: number,
-    public charge: number
+    private charge: number
   ) {
     super(make, speed);
   }
@@ -31,10 +31,14 @@ export class EV extends Car {
     this.charge = chargeTo;
   }
 
-  accelerate() {
+  get _charge(){
+    return this.charge
+  }
+
+  accelerate():any {
      this.speed += 20 ;
      this.charge = this.charge -1;
-     return this.speed && this.charge
+     return this
   }
 }
 

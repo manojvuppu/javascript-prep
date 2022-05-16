@@ -30,15 +30,25 @@ export class AppComponent {
     // console.log(bmw);
 
     let tesla = new EV('Tesla', 120, 23);
-    console.log(tesla);
+    console.log(
+      'Tesla going at ' +
+        tesla.speed +
+        'km/h with a charge of ' +
+        tesla._charge +
+        '%'
+    );
 
-    tesla.chargeBattery = 90;
+    console.log('chaining methods start');
+
+    tesla.accelerate().chargeBattery = 90;
+
+    console.log('chaining methods ends');
 
     console.log(
       'Tesla going at ' +
         tesla.speed +
         'km/h with a charge of ' +
-        tesla.charge +
+        tesla._charge +
         '%'
     );
 
@@ -49,15 +59,13 @@ export class AppComponent {
       'Tesla going at ' +
         tesla.speed +
         'km/h with a charge of ' +
-        tesla.charge +
+        tesla._charge +
         '%'
     );
 
     // tesla.chargeBattery();
 
     console.log(tesla);
-
-    
 
     console.log();
 
