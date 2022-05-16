@@ -27,9 +27,14 @@ export class EV extends Car {
     super(make, speed);
   }
 
-  chargeBattery(chargeTo: string) {}
+  set chargeBattery(chargeTo: number) {
+    this.charge = chargeTo;
+  }
 
   accelerate() {
-    return (this.speed += 20);
+     this.speed += 20 ;
+     this.charge = this.charge -1;
+     return this.speed && this.charge
   }
 }
+

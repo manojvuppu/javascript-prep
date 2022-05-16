@@ -30,6 +30,9 @@ export class AppComponent {
     // console.log(bmw);
 
     let tesla = new EV('Tesla', 120, 23);
+    console.log(tesla);
+
+    tesla.chargeBattery = 90;
 
     console.log(
       'Tesla going at ' +
@@ -39,10 +42,8 @@ export class AppComponent {
         '%'
     );
 
-    console.log( tesla.accelerate());
-    
-
-   
+    console.log(tesla.accelerate());
+    console.log(tesla.accelerate());
 
     console.log(
       'Tesla going at ' +
@@ -52,9 +53,11 @@ export class AppComponent {
         '%'
     );
 
-    
+    // tesla.chargeBattery();
 
-    console.log();
+    console.log(tesla);
+
+    
 
     console.log();
 
