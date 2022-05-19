@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { ClBackFnComponent } from './cl-back-fn/cl-back-fn.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
