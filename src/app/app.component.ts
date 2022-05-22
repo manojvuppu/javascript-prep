@@ -38,38 +38,36 @@ export class AppComponent {
         '%'
     );
 
-    console.log('chaining methods start');
+    // console.log('chaining methods start');
 
-    tesla.accelerate().chargeBattery = 90;
+    // tesla.accelerate().chargeBattery = 90;
 
-    console.log('chaining methods ends');
+    // console.log('chaining methods ends');
 
-    console.log(
-      'Tesla going at ' +
-        tesla.speed +
-        'km/h with a charge of ' +
-        tesla._charge +
-        '%'
-    );
+    // console.log(
+    //   'Tesla going at ' +
+    //     tesla.speed +
+    //     'km/h with a charge of ' +
+    //     tesla._charge +
+    //     '%'
+    // );
 
-    console.log(tesla.accelerate());
-    console.log(tesla.accelerate());
+    // console.log(tesla.accelerate());
+    // console.log(tesla.accelerate());
 
-    console.log(
-      'Tesla going at ' +
-        tesla.speed +
-        'km/h with a charge of ' +
-        tesla._charge +
-        '%'
-    );
+    // console.log(
+    //   'Tesla going at ' +
+    //     tesla.speed +
+    //     'km/h with a charge of ' +
+    //     tesla._charge +
+    //     '%'
+    // );
 
     // tesla.chargeBattery();
 
-    console.log(tesla);
+    // console.log(tesla);
 
-    console.log();
-
-    console.log();
+    
   }
 }
 
