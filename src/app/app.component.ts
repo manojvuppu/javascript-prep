@@ -29,14 +29,14 @@ export class AppComponent {
     // bmw.speed = 50;
     // console.log(bmw);
 
-    let tesla = new EV('Tesla', 120, 23);
-    console.log(
-      'Tesla going at ' +
-        tesla.speed +
-        'km/h with a charge of ' +
-        tesla._charge +
-        '%'
-    );
+    // let tesla = new EV('Tesla', 120, 23);
+    // console.log(
+    //   'Tesla going at ' +
+    //     tesla.speed +
+    //     'km/h with a charge of ' +
+    //     tesla._charge +
+    //     '%'
+    // );
 
     // console.log('chaining methods start');
 

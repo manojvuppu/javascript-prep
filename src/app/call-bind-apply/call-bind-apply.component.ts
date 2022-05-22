@@ -11,28 +11,29 @@ export class CallBindApplyComponent implements OnInit {
     options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
     answers: new Array(4).fill(0),
     registerNewAnswer() {
-      return Number(
+      const answer: Number = Number(
         prompt(
           `${this.question}\n${this.options.join('\n')}\n(write option number)`
         )
       );
-      // console.log(test);
+      console.log(answer);
+      typeof answer == 'number' &&
+        answer < this.answers.length &&
+        this.answers[answer]++;
     },
   };
 
   constructor() {}
 
   ngOnInit() {
-    // console.log(this.poll.registerNewAnswer());
-    if (this.poll.registerNewAnswer() <= 3) {
-      this.poll.answers[this.poll.registerNewAnswer()]++;
-    }
+    this.poll.registerNewAnswer();
     console.log(this.poll);
-
-    // prompt()
   }
 
-  // registerNewAnswer(){
-
-  // }
+  registerNewAnswer() {
+    // if (this.poll.registerNewAnswer()) {
+    //   // this.poll.answers[this.poll.registerNewAnswer()]++;
+    // }
+    console.log(this.poll);
+  }
 }
