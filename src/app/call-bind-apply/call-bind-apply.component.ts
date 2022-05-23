@@ -20,20 +20,23 @@ export class CallBindApplyComponent implements OnInit {
       typeof answer == 'number' &&
         answer < this.answers.length &&
         this.answers[answer]++;
+      // return answer;
     },
   };
 
   constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  registerNewAnswer() {
     this.poll.registerNewAnswer();
+    this.displayResults(this.poll.answers as [string]);
     console.log(this.poll);
   }
 
-  registerNewAnswer() {
-    // if (this.poll.registerNewAnswer()) {
-    //   // this.poll.answers[this.poll.registerNewAnswer()]++;
-    // }
-    console.log(this.poll);
+  displayResults(type: string | [string]) {
+    typeof type == 'string'
+      ? console.log(`Poll results are `)
+      : console.log(`Poll results are ${type.join(',')}`);
   }
 }
