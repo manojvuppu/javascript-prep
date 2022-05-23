@@ -21,22 +21,37 @@ export class CallBindApplyComponent implements OnInit {
         answer < this.answers.length &&
         this.answers[answer]++;
       // return answer;
+      this.displayResults('array');
+    },
+    displayResults(type = 'array') {
+      console.log(type);
+      type === 'string'
+        ? console.log(this.answers)
+        : console.log(`Poll results are ${this.answers.join(',')}`);
     },
   };
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // document
+    //   .querySelector('.register')
+    //   .addEventListener('click', this.poll.registerNewAnswer.bind(this.poll));
 
-  registerNewAnswer() {
-    this.poll.registerNewAnswer();
-    this.displayResults(this.poll.answers as [string]);
+    this.poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
     console.log(this.poll);
   }
 
-  displayResults(type: string | [string]) {
-    typeof type == 'string'
-      ? console.log(`Poll results are `)
-      : console.log(`Poll results are ${type.join(',')}`);
+  registerNewAnswer() {
+    this.poll.registerNewAnswer();
+
+    // this.displayResults(this.poll.answers as [string]);
+    // console.log(this.poll);
   }
+
+  // displayResults(type: string | [string]) {
+  //   typeof type == 'string'
+  //     ? console.log(`Poll results are `)
+  //     : console.log(`Poll results are ${type.join(',')}`);
+  // }
 }
